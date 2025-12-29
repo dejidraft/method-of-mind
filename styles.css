@@ -86,31 +86,7 @@ textarea.input{ resize: vertical; }
 /* =========================
    Header / Nav
    ========================= */
-.site-header{
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  background: rgba(248,244,239,0.78);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(229,224,216,0.9);
-}
 
-.site-header .inner{
-  max-width: var(--content-width);
-  margin: 0 auto;
-  padding: 14px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-}
-
-.brand{
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
-}
 
 .logo{
   height: 60px;      /* adjust this only */
@@ -124,26 +100,67 @@ textarea.input{ resize: vertical; }
 }
 
 
+.site-header{
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-inner{
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.brand{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--accent);
+  font-weight: 800;
+}
+
+.brand-logo{
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+}
+
 .nav{
   display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
 }
 
 .nav a{
   text-decoration: none;
   color: var(--text);
   font-weight: 650;
-  padding: 7px 12px;
+  padding: 6px 10px;
   border-radius: 999px;
-  border: 1px solid transparent;
 }
 
 .nav a:hover{
-  background: rgba(77,98,153,0.08);
+  background: rgba(77, 98, 153, 0.08);
   color: var(--accent);
-  border-color: rgba(77,98,153,0.18);
 }
+
+/* Optional: make Request Topic look like a rounded “button” */
+.nav a.pill{
+  background: rgba(77, 98, 153, 0.10);
+  border: 1px solid var(--border);
+}
+.nav a.pill:hover{
+  background: rgba(77, 98, 153, 0.16);
+}
+
 
 .nav a[aria-current="page"]{
   background: rgba(77,98,153,0.12);
@@ -285,6 +302,7 @@ footer{
   border: 0;
   margin: 22px 0;
 }
+
 
 
 
