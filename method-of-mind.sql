@@ -5,6 +5,8 @@ topics.html
 research-methods.html
 biopsych.html
 personality.html
+intro-psych.html
 styles.css
+
 
 
