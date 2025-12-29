@@ -38,7 +38,7 @@ body{
 /* =========================
    Buttons
    ========================= */
-.button .btn{
+.button .class .btn{
    background: white;
    color: #4d6299;
    border: 3px solid #4d6299;
@@ -205,12 +205,20 @@ a.card:focus{
 
 /* =========================
    Cards grid for Topics page / Home sections
-   ========================= */
-.cards{
+Two-column card layout for homepage */
+.cards {
   display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 16px;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
+
+/* Optional: stack on small screens */
+@media (max-width: 700px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 /* =========================
    Footer
@@ -233,6 +241,7 @@ footer{
   border: 0;
   margin: 22px 0;
 }
+
 
 
 
